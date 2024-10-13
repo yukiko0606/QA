@@ -1,0 +1,452 @@
+/* 全ての要素 */
+* {
+    box-sizing: border-box;
+}
+p {
+    font-size: 15px;
+}
+body {
+    max-width: 1080px;
+    margin: 0 auto ;
+    font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+/* スマホ用のナビゲーションは非表示 */
+#nav-sp,
+#menu-sp {
+    display: none;
+}
+
+#nav-pc {
+    font-size: 14px;
+}
+#nav-pc ul {
+    padding-left: 0;
+    display: flex;
+}
+#nav-pc li{
+    /* 一括指定プロパティ （リストの全てのスタイルを設定） */
+    list-style: none;
+}
+#nav-pc a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: #0d0d0d;
+}
+#nav-pc a:hover {
+    text-decoration: underline;
+}
+/* メインビジュアル */
+#main-visual {
+    position: relative;
+    height: 470px;
+}
+#main-message {
+    position: absolute;
+    /* 親要素に対して左端 */
+    top: 0;
+    left: 0;
+    background-color: #2710d5;
+    color: #ffffff;
+    max-width: 620px;
+    width: 100%;
+    height: 100%;
+    /* 左上 | 右上 | 右下 | 左下 */
+    border-radius: 0 0 476px 0;
+    z-index: 11;
+    }
+#main-message h1 {
+    font-size: 60px;
+    /* 上 | 右 | 下 | 左 */
+    margin: 100px 0 0 50px;
+}
+#main-message p {
+    font-size: 28px;
+    margin: 0 0 0 50px;
+}
+#main-visual img {
+    max-width: 620px;
+    border-radius: 476px 0 0 0;
+    position: absolute;
+    /* 親要素に対して右端 */
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#mission {
+    margin: 80px auto;
+}
+h2 {
+    margin-top: 40px;
+}
+.index-h2::after {
+    /* ↓疑似クラスにて画像を追加 */
+    content: url(images/line.png);
+    margin-left: 10px;
+}
+h3 {
+    font-size: 27px;
+}
+#mission-flex {
+    display: flex;
+}
+#mission-flex h3 {
+    font-size: 27px;
+}
+#mission-flex > div {
+    flex-basis: 50%;
+    margin: 20px;
+}
+#lfet-content img {
+    width: 100%;
+}
+#right-content-img {
+    width: 100%;
+    margin-top: 50px;
+}
+#product {
+    background-color: #fafafa;
+    margin: 80px auto;
+    padding: 10px 40px 0px 40px;
+}
+#product .product-flex {
+    display: flex;
+    margin-top: 40px;
+}
+#lfet-product {
+    width: 50%;
+    margin-right: 20px;
+}
+#right-product {
+    width: 50%;
+    margin-left: 20px;
+    margin-top: 80px;
+}
+#lfet-product > div {
+    /* ↓このrelativeは親要素を示している。子要素でabsoluteを指定しているため。 */
+    position: relative;
+    margin-right: 20px;
+    height: 480px;
+}
+#right-product > div {
+    position: relative;
+    margin-left: 20px;
+    height: 480px;
+}
+.product-photo {
+    width: 100%;
+}
+.product-explain {
+    background-color: #ffffff;
+    /* 画像とテキストを重ねる時は、absoluteを使う。 */
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    margin: 0 40px 0 40px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+}
+.product-explain span {
+    color: #2710d5;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+.product-explain h3{
+    margin: 5px 0 5px 0;
+}
+.product-explain p {
+    font-size: 14px;
+    margin: 0;
+}
+#more-button {
+    text-align: center;
+}
+#more-button a {
+    position: relative;
+    bottom: -42px;
+}
+#aboutus {
+    margin: 80px auto;
+}
+.aboutus-flex {
+    display: flex;
+}
+.culture1-img {
+    /* ↓これ入れても変化はない。（元々親要素の半分程度の幅になっている） */
+    width: 50%;
+    align-self: flex-start;
+}
+.culture2-img {
+    width: 100%;
+    margin-top: 50px;
+}
+.culture-table {
+    margin-right: 50px;
+}
+.culture-td {
+    font-size: 80px;
+    color: #2710d5;
+    padding: 0 20px 0 0;
+}
+.culture-th {
+    text-align: left;
+    font-size: 28px;
+    font-weight: bold;
+}
+.culture-span {
+    color: #2710d5;
+    font-size: 24px;
+}
+.culture-description {
+    margin: 0;
+}
+#vision{
+    margin: 80px auto ;
+}
+#vision > div {
+    display: flex;
+    justify-content: space-between;
+    /* align-content: space-between; */
+    flex-wrap: wrap;
+}
+/* 7つ目のボックスのみスタイルを指定 */
+/* #vision > div > div:nth-child(7){
+    background-color: aqua;
+} */
+.vission-box {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.vission-box > img{
+    width: 100%;
+    z-index: 30;
+}
+.vission-box > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 31;
+    margin-right: 20px;
+}
+.vission-box h4 {
+    color: #2710d5;
+    font-size: 19px;
+    margin: 80px 0 0 0;
+}
+.vission-box h4::first-letter {
+    font-size: 40px;
+}
+.vission-box h5 {
+    font-size: 20px;
+    margin: 0;
+}
+.vission-box p {
+    margin: 10px 0 0 0;
+}
+#company {
+    margin: 80px auto ;
+}
+.company-table {
+    width: 100%;
+}
+.company-table th {
+    text-align: left;
+    padding: 20px;
+    border-bottom-color: #2710d5;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    width: 100px;
+}
+.tableheader-first {
+    border-top-color: #2710d5;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.company-table td {
+    padding: 30px;
+    border-bottom-color: #ececec;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+.cell-first {
+    border-top-color: #ececec;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+#company-iframe {
+    width: 100%;
+    height: 368px;
+    margin-top: 40px;
+}
+#contact {
+    margin: 80px auto ;
+}
+#contact > form > div {
+    display: flex;
+    /* アイテムの並び順　初期値 */
+    flex-direction: row;
+    /* 折り返しの場合、上下に並べる */
+    flex-wrap:wrap;
+    padding-bottom: 30px;
+}
+/* 子要素 */
+.contact-headerleft {
+    width: 240px;
+    align-self:center;
+}
+.contact-lable {
+    font-weight: bold;
+}
+.contact-spna {
+    color: red;
+    font-weight: bold;
+    margin-left: 15px;
+}
+.contact-text {
+    width: 400px;
+    height: 50px;
+    border-bottom-color: #707070;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    background-color: #fafafa;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.contact-textarea {
+    height: 200px;
+}
+#contact details dt {
+    font-weight: bold;
+}
+#contact details ::marker {
+    color:blue;
+}
+#contact details dd {
+    margin:0 0 16px 0;
+}
+#contact details p {
+    margin: 0 0 0 0;
+}
+#contact details ul {
+    /* マーカを消す */
+    list-style: none;
+    padding: 0 0 0 0;
+}
+.contact-checkbox {
+    margin: 3px 3px 3px 0;
+}
+footer {
+    background-color: #0d0d0d;
+    padding: 80px 80px 30px 80px;
+}
+.footer-div {
+    text-align: center;
+    margin-bottom: 30px;
+}
+footer div:nth-of-type(2) {
+    margin-bottom: 50px;
+}
+footer div:nth-of-type(2) > a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+}
+footer div:nth-of-type(2) > a:hover {
+    text-decoration: underline;
+}
+footer div:nth-of-type(3) {
+    display: flex;
+    justify-content: space-between;
+}
+footer div:nth-of-type(3) > div > a {
+    margin-right: 30px;
+}
+#copyright {
+    color: #ececec;
+    margin: 0 0 0 0;
+}
+
+/*====================
+   スマートフォン用のスタイル
+  =====================*/
+
+/* 画面幅が767px以下の場合 */
+@media screen and (max-width: 767px) {
+    /* PC用ナビゲーションを非表示 */
+    #nav-pc {
+        display: none;
+    }
+    #menu-sp {
+        display: block;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        /* ハンバーガーメニューの要素を浮かせる。スマホ用のナビゲーションを右に寄せる。 */
+        float: right;
+    }
+    #nav-sp {
+        background-color: #2710d5;
+        width: 100%;
+        height: 100%;
+        
+        /* 画面を基準に右上に配置（スクロールしても動かない） */
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        display: none;
+        /* どの要素よりも上に重なる */
+        z-index: 100;
+    }
+    #close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: transparent;
+        border: none;
+    }
+    #nav-sp ul {
+        padding-left: 0;
+    }
+    #nav-sp li {
+        list-style: none;
+    }
+    /* スマホ用ロゴ */
+    #logo-sp {
+        /*aタグのdisplayの初期値はinlineなので、marginは適用されない。
+          ⇒#nav-sp nav a要素のdisplayをblock（縦並び）にすることで、初めて適用させる。*/
+        margin: 80px 0 30px 20px;
+    }
+    #nav-sp nav a {
+        display: block;
+        color: #ffffff;
+    }
+    #nav-sp nav a:hover {
+        text-decoration: underline;
+    }
+    #nav-sp nav .menu {
+        text-decoration: none;
+        margin: 0 20px 0 20px;
+        font-size: 16px;
+        height: 44px;
+        background-image: url(images/arrow.png);
+        background-repeat: no-repeat;
+        background-position: right top;
+    }
+    #sns-sp {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+    }
+    #sns-sp > a {
+        margin-right: 20px;
+    }
+}
